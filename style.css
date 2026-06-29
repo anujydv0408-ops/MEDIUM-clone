@@ -1,0 +1,582 @@
+/* ==========================
+   Reset
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f7f7;
+}
+
+
+/* ==========================
+   Navbar
+========================== */
+
+.navbar{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:white;
+
+    padding:15px 40px;
+
+    border-bottom:1px solid #ddd;
+
+    position:sticky;
+    top:0;
+}
+
+.nav-left{
+
+    display:flex;
+    align-items:center;
+
+    gap:30px;
+
+}
+
+.logo{
+
+    font-size:50px;
+
+    font-family:Georgia, serif;
+
+    font-weight:bold;
+
+}
+
+.search-box{
+
+    width:280px;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:25px;
+
+    background:#efefef;
+
+    outline:none;
+
+}
+
+
+.nav-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.nav-right a{
+
+    text-decoration:none;
+
+    color:black;
+
+    font-size:18px;
+
+}
+
+.app-btn{
+
+    background:black;
+
+    color:white;
+
+    padding:12px 20px;
+
+    border:none;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+}
+
+.profile{
+
+    width:40px;
+
+    height:40px;
+
+    border-radius:50%;
+
+    background:steelblue;
+
+}
+
+
+/* ==========================
+   Main Layout
+========================== */
+
+.container{
+
+    display:grid;
+
+    grid-template-columns:220px 1fr 320px;
+
+    gap:30px;
+
+    padding:30px;
+
+}
+
+
+/* ==========================
+   Left Sidebar
+========================== */
+
+.left-sidebar{
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:8px;
+
+    height:fit-content;
+
+}
+
+.left-sidebar ul{
+
+    list-style:none;
+
+}
+
+.left-sidebar li{
+
+    padding:15px 0;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+}
+
+.left-sidebar li:hover{
+
+    color:green;
+
+}
+
+
+/* ==========================
+   Center Content
+========================== */
+
+.content{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:8px;
+
+}
+
+.tabs{
+
+    display:flex;
+
+    gap:40px;
+
+    border-bottom:1px solid #ddd;
+
+    margin-bottom:25px;
+
+}
+
+.tabs span{
+
+    padding-bottom:15px;
+
+    cursor:pointer;
+
+}
+
+.active{
+
+    border-bottom:3px solid black;
+
+    font-weight:bold;
+
+}
+
+
+/* ==========================
+   Article Card
+========================== */
+
+.article{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    border-bottom:1px solid #ddd;
+
+    padding:25px 0;
+
+}
+
+.article:last-child{
+
+    border-bottom:none;
+
+}
+
+.article-text{
+
+    width:65%;
+
+}
+
+.author{
+
+    color:gray;
+
+    margin-bottom:12px;
+
+}
+
+.article h2{
+
+    font-size:34px;
+
+    margin-bottom:15px;
+
+}
+
+.description{
+
+    color:#555;
+
+    font-size:18px;
+
+    line-height:28px;
+
+}
+
+.stats{
+
+    margin-top:20px;
+
+    color:gray;
+
+}
+
+.article img{
+
+    width:220px;
+
+    height:150px;
+
+    object-fit:cover;
+
+    border-radius:6px;
+
+}
+
+
+/* ==========================
+   Right Sidebar
+========================== */
+
+.right-sidebar{
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:8px;
+
+    height:fit-content;
+
+}
+
+.right-sidebar h2{
+
+    margin-bottom:20px;
+
+}
+
+.pick{
+
+    margin-bottom:30px;
+
+}
+
+.pick p{
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    margin-bottom:8px;
+
+}
+
+.pick small{
+
+    color:gray;
+
+}
+
+.topic-heading{
+
+    margin-top:40px;
+
+}
+
+.topics{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+}
+
+.topics span{
+
+    background:#eeeeee;
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.topics span:hover{
+
+    background:#ddd;
+
+}
+
+
+/* ==========================
+   Hover Effects
+========================== */
+
+.article:hover{
+
+    background:#fafafa;
+
+}
+
+.app-btn:hover{
+
+    background:#333;
+
+}
+
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:1200px){
+
+.container{
+
+grid-template-columns:200px 1fr;
+
+}
+
+.right-sidebar{
+
+display:none;
+
+}
+
+}
+
+
+
+@media(max-width:768px){
+
+.container{
+
+grid-template-columns:1fr;
+
+}
+
+.left-sidebar{
+
+display:none;
+
+}
+
+.navbar{
+
+padding:15px;
+
+}
+
+.search-box{
+
+width:150px;
+
+}
+
+.article{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.article img{
+
+width:100%;
+
+height:auto;
+
+margin-top:20px;
+
+}
+
+.article-text{
+
+width:100%;
+
+}
+
+.logo{
+
+font-size:38px;
+
+}
+
+}
+/* ===========================
+   Article Footer
+=========================== */
+
+.article-footer{
+
+    margin-top:20px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.left-info{
+
+    display:flex;
+
+    gap:18px;
+
+    color:gray;
+
+    font-size:14px;
+
+}
+
+.right-info{
+
+    display:flex;
+
+    gap:18px;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+}
+
+.right-info span:hover{
+
+    color:green;
+
+}
+
+.article{
+
+    transition:.3s;
+
+}
+
+.article:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.author{
+
+    font-size:14px;
+
+    font-weight:500;
+
+}
+
+.description{
+
+    margin-top:10px;
+
+}
+
+.tabs span{
+
+    padding:12px 0;
+
+    font-size:17px;
+
+
+}
+body{
+    font-family: 'Inter', sans-serif;
+    background:#ffffff;
+    color:#242424;
+}
+
+.logo{
+    font-family: Georgia, serif;
+    font-size:42px;
+    font-weight:700;
+}
+
+h2{
+    font-size:28px;
+    font-weight:700;
+    line-height:36px;
+}
+
+.author{
+    font-size:13px;
+    color:#6B6B6B;
+}
+
+.description{
+    color:#6B6B6B;
+    font-size:16px;
+    line-height:24px;
+}
